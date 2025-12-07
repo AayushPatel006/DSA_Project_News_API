@@ -8,6 +8,7 @@ app = FastAPI()
 # load news data
 with open("news.json") as f:
     NEWS = json.load(f)
+    print("Number of news items loaded:", len(NEWS))
 
 queue = asyncio.Queue()
 index = 0  # track which news to send next
